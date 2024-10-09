@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زيادة المتابعين</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>زيادة متابعين وسائل التواصل الاجتماعي</h1>
+    <form id="followForm">
+        <input type="text" id="username" placeholder="اسم المستخدم" required>
+        <button type="submit">متابعة</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('followForm').onsubmit = function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            document.getElementById('result').innerText = 'تم متابعة: ' + username;
+        };
+    </script>
+</body>
+</html>
